@@ -1,0 +1,118 @@
+body{margin:0;padding:0;background-color:#FFE1A1;font-family:'Lato',sans-serif;}
+
+
+/* HEADER */
+header{ background-color:#F95959;height:70px;box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);position:sticky;top:0px;z-index:1;width:100%;}
+header > h1 {text-transform:capitalize;color:white;font-family:'Wendy one',sans-serif;font-weight:bold;float:left;margin-bottom:0;font-size:40px;position:relative;top:-10px;}
+header > h1 > span {color:#FFE1A1;}
+img.icon-left{width:50px;height:50px;float:left;padding:10px;}
+img.icon-right{width:50px;height:50px;float:right;padding:10px;position:relative;right:10px;}
+img.icon-right:hover{cursor:pointer;}
+
+
+/*BODY*/
+main {margin:0;padding:0;}
+
+.search {background-color:#FCFFCC;margin:0;width:100%;position:relative;
+		z-index:1;top:-150px;overflow:hidden;transition:top 0.4s ease;}
+.show-search {position:relative;z-index:0;top:0px;}
+.search-form {margin:0;padding:0;padding:10px;}
+.search-form > label {color:black;margin:10px;}
+.search-form > select {padding:6px;}
+.search-form > input {padding:6px;margin-left:10px;}
+.search-form-results {float:left;margin-right:10px;}
+.search-form-results-label {float:left;position:relative;top:-5px;}
+#search-submit {float:right;margin-right:10px;}
+#reset {float:right;}
+
+.pokecard-container {width:90%;display:block;overflow:hidden;margin-top:40px;padding:10px;text-align:center;margin-left: auto;margin-right: auto;}
+.poke-card-background {text-align:center;background: linear-gradient(to right, #FFE1A1, #d74747);margin:0;height:auto;}
+.poke-card {background-color:#F9BF8F;margin: 18px 8px 50px auto;border:6px solid #F95959;border-radius:10px;position: relative;width: 22%;height: 170px;  padding: 0px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); float:left;overflow:hidden;cursor:pointer;transition: all 0.4s ease}
+.poke-card:hover {width:22%;box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+.poke-card-title{background-color:#d74747;color:white;}
+.poke-card-title > span {text-transform:capitalize;font-weight:lighter;text-align:center;font-size:18px;height:auto;}
+.poke-card-content {background-color: #d74747;margin:0;}
+.poke-card-stats {text-align:center;}
+.poke-card-stats > table {color:white;width:98%;height:auto;text-align:center;margin:0;}
+.poke-card-stats > table > tbody {font-weight:bold;}
+.poke-card-type {background-color:#d74747;color:white;padding:5px;border-radius:5px;display:block;position:relative;top:-80px;width:50px;right:-10px;}
+
+
+@media screen and (max-width:1200px){
+	.search {background-color:#FCFFCC;margin:0;width:100%;position:relative;
+		z-index:1;top:-1000px;overflow:hidden;transition:top 0.4s ease;height:100px;overflow-y:scroll;}
+	.show-search {position:relative;z-index:0;top:0px;height:1000px;overflow:hidden;}
+	.search-form {margin:0;padding:0;padding:0px;height:auto;margin-left:auto;margin-left:auto;width:80%;overflow-y:scroll;}
+	.search-form > input {padding:4px;float:left;width:80%;}
+	.search-form > label {color:black;float:left;width:20%;padding:4px;margin:0;}
+	.search-form > select {padding:4px;float:left;clear:both;width:82%;margin-left:10px;}
+	.search-form-results-label {float:left;position:relative;top:-5px;}
+	.search-form-results {float:right;margin-right:0px;margin-left:10px;width:82%;}
+	#search-submit {float:left;margin-right:0px;padding:10px;width:82%;margin-top:4px;}
+	#reset{float:left;padding:10px;width:82%;margin-top:4px;}
+	.pokecard-container {width:90%;display:block;overflow:hidden;margin-top:40px;padding:10px;text-align:center;margin-left: auto;margin-right: auto;}
+
+}
+
+@media only screen and (max-width:960px){
+	.search-form > label {color:black;margin:0px;}
+	.search-form {margin:0;padding:0;height:auto;margin-left:auto;margin-left:auto;width:80%;overflow:scroll;}
+	.pokecard-container {width:90%;display:block;overflow:hidden;margin-top:40px;padding:10px;text-align:center;margin-left: auto;margin-right: auto;}
+	.poke-card {background-color:#F9BF8F;margin: 8px 8px 30px 0px;border:6px solid #F95959;border-radius:10px;position: relative;width: 30%;height: 168px;  padding: 0px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);overflow:hidden;cursor:pointer;transition: all 0.4s ease;float:left;}
+	.poke-card:hover {width:30%;box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }	
+	#reset{padding:10px;width:82%;float:none;}
+}
+
+@media only screen and (max-width:670px){
+	.pokecard-container {width:90%;display:block;overflow:hidden;margin-top:40px;padding:10px;text-align:center;margin-left: auto;margin-right: auto;}
+	.poke-card {background-color:#F9BF8F;margin: 8px 8px 30px 0px;border:6px solid #F95959;border-radius:10px;position: relative;width: 42%;height: 168px;  padding: 0px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);overflow:hidden;cursor:pointer;transition: all 0.4s ease;float:left;}
+	.poke-card:hover {width:42%;box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+	#reset{padding:10px;width:82%;float:none;}
+	
+}
+
+
+@media only screen and (max-width: 380px) {
+	.pokecard-container {width:90%;display:block;overflow:hidden;margin-top:40px;padding:10px;text-align:center;margin-left: auto;margin-right: auto;}
+	.poke-card {background-color:#F9BF8F;margin: 8px 8px 30px 0px;border:6px solid #F95959;border-radius:10px;position: relative;width: 95%;height: 168px;  padding: 0px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);clear:both;overflow:hidden;cursor:pointer;transition: all 0.4s ease;float:left;}
+	.poke-card:hover {width:95%;box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+	#reset{padding:10px;width:82%;float:none;}
+}
+
+@media only screen and (max-width: 320px) {
+	header > h1 {display:none;}
+	poke-card-type {display:none;}
+}
+
+ @keyframes spin { 
+    from { 
+		transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+.loading{z-index:2;width:100%;height:100%;position:sticky;text-align:center;margin-top:40px;padding:0;top:0px}
+.loading > img {
+	width:20%;
+	animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.loading > h1 {font-size: 32px;font-weight: 400;text-align: center;}
+
+.nocon{background-color:white;width:100%;height:auto;text-align:center;margin:0;padding:0;clear:both;float:left;}
+.nocon > h1 {font-size: 20px;font-weight: 200;text-align: center;}
+.hidden{display:none;}
+
+
+/* Detailed */
+
+.detailed-content {background-color:white;width:90%;height:auto;position:relative;top:70px;align-content: center;text-align:center;border:1px solid black;border-collapse: collapse;align-content:center;
+  margin-left: auto;margin-right: auto;}
+
+.detailed-card-title {padding:8px;background-color:#d74747;color:white;}
+.detailed-card-title > span {text-transform:capitalize;font-weight:lighter;text-align:center;font-size:18px;height:auto;}
+.detailed-table {text-align:center;align-content:center;border-top:1px solid black;width:100%; border-collapse: collapse;}
+.detailed-table > tbody > tr > td {padding:6px;}

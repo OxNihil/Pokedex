@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pokedex</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Practica IPM 3">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/visual.js"></script>
+		<script src="js/nav.js"></script>
+		<script src="js/pokecards.js"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<img class="icon-left" alt="logo" src="img/pokeball.png">
+			<h1><span>Poke</span>dex</h1>
+			<img class="icon-right" src="img/lupa.png" alt="search" tabindex="0" role="button" onkeypress="searchmenu()" onclick="searchmenu()">
+			<nav class="search" id="search-opts">
+				<form action="javascript:void(0);" class="search-form" id="search-form">
+					<label for="poke-id">ID</label>
+					<input type="number" id="poke-id" name="poke-id" placeholder="Id. pokemon" step="1">
+					<label for="poke-name">Name</label>
+					<input placeholder="Name..." name="poke-name" id="poke-name">
+					<label for="opt-pokemon-type">Type</label>
+					<select id="opt-pokemon-type">
+						<option value="all">all</option>
+					</select>
+					<label for="poke-ord" class="search-form-results-label">Order</label>
+					<select id="poke-ord" name="poke-ord" class="search-form-results">
+						<option value="ASC">ASC</option>
+						<option value="DES">DES</option>
+					</select>
+					<label for="limit" class="search-form-results-label">Results</label>
+					<input type="number" id="limit" name="limit" class="search-form-results" placeholder="Resultados" value="20" step="1">
+					<input type="submit" class="search-form-results" value="Buscar" id="search-submit">
+					<input class="search-form-results" id="reset" type="reset" onclick="resetScreen()">
+				</form>
+				<script>
+					fetchmaxdata(0);
+					testConnection();
+					getPokeTypeOpts();	
+					const form = document.getElementById('search-form');
+					form.addEventListener('submit',pokesubmit);						
+				</script>
+			</nav>
+		</header>
+		<div class="nocon hidden" id="nocon"><h1>Could not connect to API :(</h1></div>
+		<main>
+			<div class="loading" id="loading">
+				<img id="loading-img" alt="pokeball" src="img/loading.png">
+				<h1>Loading....</h1>
+			</div>
+			<script>
+				
+			</script>	
+			<div class="pokecard-container" id="poke-container">
+				<div id="firts-pokecard"></div>
+			</div>
+		</main>
+	</body>
+</html>
